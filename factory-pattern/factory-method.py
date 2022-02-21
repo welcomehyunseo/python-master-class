@@ -1,6 +1,7 @@
 import json
 import xml.etree.ElementTree as ET
 
+
 class Movie:
     def __init__(self, title, year, director) -> None:
         self.title = title
@@ -57,9 +58,10 @@ class XMLFileReader:
 
 
 file_path_list = [
-    "D:\\github-welcomehyunseo\\python-master-class\\factory-pattern\\movies\\Avatar.json",
-    "D:\\github-welcomehyunseo\\python-master-class\\factory-pattern\\movies\\interstellar.xml",
+    "movies/Avatar.json",
+    "movies/interstellar.xml",
 ]
+
 
 def factory_method(file_path_list):
     for file_path in file_path_list:
@@ -72,5 +74,6 @@ def factory_method(file_path_list):
             reader = XMLFileReader(file_path)
             movie = reader.create_movie_object()
             movie.print_info()
+
 
 factory_method(file_path_list)

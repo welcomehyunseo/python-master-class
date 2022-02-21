@@ -1,1 +1,1 @@
-not
+print(os.getcwd())
