@@ -24,8 +24,8 @@ class JSONFileReader:
         file.close()
 
     def create_movie_object(self) -> Movie:
-        if not self.data:
-            self.parser()
+            if not self.data:
+                self.parser()
 
         movie = Movie(
             self.data["Title"],
